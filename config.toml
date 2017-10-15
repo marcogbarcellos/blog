@@ -5,6 +5,7 @@ theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
+publishDir = "docs"
 #disqusShortname = "XXX"
 #googleAnalytics = "XXX"
 
@@ -35,7 +36,7 @@ pygmentCodeFences = true
   twitter = "marcogbarcellos"
   reddit = "marcogbarcellos"
   linkedin = "marcogbarcellos"
-  
+
 
 [[menu.main]]
     name = "Blog"
@@ -50,4 +51,4 @@ pygmentCodeFences = true
 [[menu.main]]
     name = "Tags"
     url = "/tags"
-    weight = 3 
+    weight = 3
