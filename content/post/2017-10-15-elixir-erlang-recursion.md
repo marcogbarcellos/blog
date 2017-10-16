@@ -12,7 +12,7 @@ For most languages, this approach can demand a lot of memory to be executed as e
 ## Erlang and Elixir Approach
 
 
-In Elixir and Erlang, we have what's called `tail-call optimization`. A tail call function is a function which call another functions as its last thing. And this optimization works in a way that's similar to a `goto` or a `jump` and you don't need to allocate extra memory when pushing more functions to the stack.
+In Elixir and Erlang, we have what's called `tail-call optimization`. A tail call function is a function which call another functions(including itself) as its last thing. And this optimization works in a way that's similar to a `goto` or a `jump` and you don't need to allocate extra memory when pushing more functions to the stack.
 
 The following snippet gives an example of what is a tail call function:
 
