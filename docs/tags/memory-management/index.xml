@@ -19,8 +19,8 @@
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
       <guid>https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/</guid>
-      <description>A tail call function is a function which call another functions as its last thing:
- def first_func(...) do ... another_func(...) end  In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&amp;rsquo;s called tail-call optimization. This optimization works in a way that&amp;rsquo;s similar to a goto or a jump and you don&amp;rsquo;t need allocate more memory when pushing more functions to the stack.</description>
+      <description>Many developers when solving specific problems prefer to stick with a recursive approach, and the reason might be because in some case it helps get a better time complexity(Big O) and this way improves the system performance in a whole. It also may involves personal preferences, like some think it&amp;rsquo;s more readable, or elegant and so on.
+For most languages(mainly Object Oriented, but not only) this approach can demand a lot of memory to be executed as everytime you call a function in a recursive manner, this call goes to the Stack to be executed later.</description>
     </item>
     
   </channel>

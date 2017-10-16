@@ -134,7 +134,17 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>A tail call function is a function which call another functions as its last thing:</p>
+        
+
+<p>Many developers when solving specific problems prefer to stick with a recursive approach, and the reason might be because in some case it helps get a better time complexity(Big O) and this way improves the system performance in a whole. It also may involves personal preferences, like some think it&rsquo;s more readable, or elegant and so on.</p>
+
+<p>For most languages(mainly Object Oriented, but not only) this approach can demand a lot of memory to be executed as everytime you call a function in a recursive manner, this call goes to the Stack to be executed later. This way, depending on the amount of pushes to the stack it may be heavier than choosing a non-recursive approach to execute it, even though its Time complexity is superior.</p>
+
+<h2 id="erlang-and-elixir-approach">Erlang and Elixir Approach</h2>
+
+<p>In Elixir and Erlang, we have what&rsquo;s called <code>tail-call optimization</code>. This optimization works in a way that&rsquo;s similar to a <code>goto</code> or a <code>jump</code> and you don&rsquo;t need allocate more memory when pushing more functions to the stack.</p>
+
+<p>A tail call function is a function which call another functions as its last thing:</p>
 
 <pre><code>
 def first_func(...) do
@@ -144,9 +154,7 @@ end
 
 </code></pre>
 
-<p>In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&rsquo;s called <code>tail-call optimization</code>. This optimization works in a way that&rsquo;s similar to a <code>goto</code> or a <code>jump</code> and you don&rsquo;t need allocate more memory when pushing more functions to the stack.</p>
-
-<p>But how ?!?!</p>
+<p>But how does it actually works ?!?!</p>
 
 <p>In the snippet above, the final result of the <code>first_func</code> is the result of <code>another_func</code>. This is why the compiler can safely perform the operation by jumping to the beginning of another_fun without doing additional memory allocation. When another_func finishes, you return to whatever place original_func was called from.</p>
 
