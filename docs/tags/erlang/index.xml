@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Marcogbarcellos</title>
-    <link>https://marcogbarcellos.github.io/blog/</link>
-    <description>Recent content on Marcogbarcellos</description>
+    <title>Erlang on Marcogbarcellos</title>
+    <link>https://marcogbarcellos.github.io/blog/tags/erlang/</link>
+    <description>Recent content in Erlang on Marcogbarcellos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</managingEditor>
     <webMaster>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</webMaster>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://marcogbarcellos.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://marcogbarcellos.github.io/blog/tags/erlang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,15 +21,6 @@
       <guid>https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/</guid>
       <description>A tail call function is a function which call another functions as its last thing:
  def first_func(...) do ... another_func(...) end  In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&amp;rsquo;s called tail-call optimization. This optimization works in a way that&amp;rsquo;s similar to a goto or a jump and you don&amp;rsquo;t need allocate more memory when pushing more functions to the stack.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://marcogbarcellos.github.io/blog/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/page/about/</guid>
-      <description>My name is Marco Gabriel Barcellos. I&amp;rsquo;m a Software Engineer currently working for nanopay. I started coding in 2007 and since then I&amp;rsquo;ve been trying to learn new things to be a great Software Engineer. There is still plenty of things to learn, but I&amp;rsquo;m very happy with the products, people, places and technologies I&amp;rsquo;ve experienced along my career. I&amp;rsquo;ve been working a lot with Java, Nodejs, Elixir, Javascript, Full Stack Development, ETL, Docker, AWS, Relational Databases (Postgresql, MySql, Sql Server, Oracle), NoSql(Mongodb, Couchdb, Elastic Search) and several other technologies.</description>
     </item>
     
   </channel>

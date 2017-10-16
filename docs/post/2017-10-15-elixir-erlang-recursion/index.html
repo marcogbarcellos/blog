@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Posts</title>
-  <meta property="og:title" content="Posts" />
-  <meta name="twitter:title" content="Posts" />
+  <title>How Elixir and Erlang handle recursion?</title>
+  <meta property="og:title" content="How Elixir and Erlang handle recursion?" />
+  <meta name="twitter:title" content="How Elixir and Erlang handle recursion?" />
+  <meta name="description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)">
+  <meta property="og:description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)">
+  <meta name="twitter:description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)">
   <meta name="author" content="Marco Gabriel Barcellos"/>
   <link href='https://marcogbarcellos.github.io/blog/img/marco.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://marcogbarcellos.github.io/blog/img/marco.png" />
@@ -16,12 +19,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@marcogbarcellos" />
   <meta name="twitter:creator" content="@marcogbarcellos" />
-  <meta property="og:url" content="https://marcogbarcellos.github.io/blog/post/" />
+  <meta property="og:url" content="https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Marcogbarcellos" />
 
   <meta name="generator" content="Hugo 0.25.1" />
-  <link rel="canonical" href="https://marcogbarcellos.github.io/blog/post/" />
+  <link rel="canonical" href="https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/" />
   <link rel="alternate" href="https://marcogbarcellos.github.io/index.xml" type="application/rss+xml" title="Marcogbarcellos">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -90,79 +93,95 @@
 
 
 
+    
+  
+  
+  
 
-    <header class="header-section ">
-      <div class="intro-header no-img">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="page-heading">
-                <h2>#Posts</h2>
-              </div>
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>How Elixir and Erlang handle recursion?</h1>
+                
+                  
+                    <h2 class="post-subheading">Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)</h2>
+                  
+                
+                
+                  <span class="post-meta">Posted on October 15, 2017</span>
+                
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+
 
     <div class="container" role="main">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="posts-list">
-            
-            
-              <article class="post-preview">
-                <a href="https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/">
-                  <h2 class="post-title">How Elixir and Erlang handle recursion?</h2>
       
-                  
-                    <h3 class="post-subtitle">
-                      Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)
-                    </h3>
-                  
-                </a>
+        <div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>A tail call function is a function which call another functions as its last thing:</p>
+
+<pre><code>
+def first_func(...) do
+  ...
+  another_func(...)
+end
+
+</code></pre>
+
+<p>In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&rsquo;s called <code>tail-call optimization</code>. This optimization works in a way that&rsquo;s similar to a <code>goto</code> or a <code>jump</code> and you don&rsquo;t need allocate more memory when pushing more functions to the stack.</p>
+
+<p>But how ?!?!</p>
+
+<p>In the snippet above, the final result of the <code>first_func</code> is the result of <code>another_func</code>. This is why the compiler can safely perform the operation by jumping to the beginning of another_fun without doing additional memory allocation. When another_func finishes, you return to whatever place original_func was called from.</p>
+
+<p>Take the following function :</p>
+
+<pre><code>
+def endless_loop(...) do
+  ...
+  endless_loop(...)
+end
+
+</code></pre>
+
+<p>This <code>endless loop</code> takes advantage of the <code>tail-optimization</code> as it can run without consume any additional memory .</p>
+
+<p>This solution fits well for arbitrarily large iterations. There is a downside, though. Whereas classical (non-tail) recursion has a more declarative feel to it, tail recursion usually looks more procedural.</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        
+      </ul>
+
       
-                <p class="post-meta">
-                  Posted on October 15, 2017
-                </p>
-                <div class="post-entry">
-                  
-                    A tail call function is a function which call another functions as its last thing:
- def first_func(...) do ... another_func(...) end  In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&rsquo;s called tail-call optimization. This optimization works in a way that&rsquo;s similar to a goto or a jump and you don&rsquo;t need allocate more memory when pushing more functions to the stack.
-                    <a href="https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/" class="post-read-more">[Read&nbsp;More]</a>
-                  
-                </div>
+        
       
-                
-                  <span class="post-meta">
-                    
-                      #<a href="/tags/elixir">elixir</a>&nbsp;
-                    
-                      #<a href="/tags/erlang">erlang</a>&nbsp;
-                    
-                      #<a href="/tags/beam">beam</a>&nbsp;
-                    
-                      #<a href="/tags/recursion">recursion</a>&nbsp;
-                    
-                      #<a href="/tags/functional-programming">functional programming</a>&nbsp;
-                    
-                      #<a href="/tags/erlang-vm">erlang vm</a>&nbsp;
-                    
-                      #<a href="/tags/memory-management">memory management</a>&nbsp;
-                    
-                      #<a href="/tags/performance">performance</a>&nbsp;
-                    
-                      #<a href="/tags/scalability">scalability</a>&nbsp;
-                    
-                  </span>
-                
-      
-              </article>
-            
-          </div>
-        </div>
-      </div>
+
     </div>
+  </div>
+</div>
+
+      
+    </div>
+
     <footer>
   <div class="container">
     <div class="row">

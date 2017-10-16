@@ -132,36 +132,47 @@
             
             
               <article class="post-preview">
-              <a href="https://marcogbarcellos.github.io/blog/post/2016-03-08-code-sample/">
-                <h2 class="post-title">Code Sample</h2>
+              <a href="https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/">
+                <h2 class="post-title">How Elixir and Erlang handle recursion?</h2>
 
                 
                   <h3 class="post-subtitle">
-                  Using Hugo or Pygments
+                  Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)
                   </h3>
                 
               </a>
 
               <p class="post-meta">
-                Posted on March 8, 2016
+                Posted on October 15, 2017
               </p>
               <div class="post-entry">
                 
-                  <p>The following are two code samples using syntax highlighting.</p>
-
-<p></p>
-                  <a href="https://marcogbarcellos.github.io/blog/post/2016-03-08-code-sample/" class="post-read-more">[Read&nbsp;More]</a>
+                  A tail call function is a function which call another functions as its last thing:
+ def first_func(...) do ... another_func(...) end  In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&rsquo;s called tail-call optimization. This optimization works in a way that&rsquo;s similar to a goto or a jump and you don&rsquo;t need allocate more memory when pushing more functions to the stack.
+                  <a href="https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/" class="post-read-more">[Read&nbsp;More]</a>
                 
               </div>
 
               
                 <span class="post-meta">
                 
-                  #<a href="/tags/example">example</a>&nbsp;
+                  #<a href="/tags/elixir">elixir</a>&nbsp;
                 
-                  #<a href="/tags/code">code</a>&nbsp;
+                  #<a href="/tags/erlang">erlang</a>&nbsp;
                 
-                  #<a href="/tags/marra">marra</a>&nbsp;
+                  #<a href="/tags/beam">beam</a>&nbsp;
+                
+                  #<a href="/tags/recursion">recursion</a>&nbsp;
+                
+                  #<a href="/tags/functional-programming">functional programming</a>&nbsp;
+                
+                  #<a href="/tags/erlang-vm">erlang vm</a>&nbsp;
+                
+                  #<a href="/tags/memory-management">memory management</a>&nbsp;
+                
+                  #<a href="/tags/performance">performance</a>&nbsp;
+                
+                  #<a href="/tags/scalability">scalability</a>&nbsp;
                 
                 </span>
               
@@ -235,7 +246,7 @@
         <p class="credits copyright text-muted">
           Marco Gabriel Barcellos
           &nbsp;&bull;&nbsp;
-          2016
+          2017
 
           
             &nbsp;&bull;&nbsp;

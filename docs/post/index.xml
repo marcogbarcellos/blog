@@ -8,20 +8,19 @@
     <language>en-us</language>
     <managingEditor>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</managingEditor>
     <webMaster>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</webMaster>
-    <lastBuildDate>Tue, 08 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://marcogbarcellos.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Code Sample</title>
-      <link>https://marcogbarcellos.github.io/blog/post/2016-03-08-code-sample/</link>
-      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <title>How Elixir and Erlang handle recursion?</title>
+      <link>https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/post/2016-03-08-code-sample/</guid>
-      <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/</guid>
+      <description>A tail call function is a function which call another functions as its last thing:
+ def first_func(...) do ... another_func(...) end  In most Object Oriented languages, whenever you start calling functions recursively, they are all pushed to the stack. In Elixir and Erlang, we have what&amp;rsquo;s called tail-call optimization. This optimization works in a way that&amp;rsquo;s similar to a goto or a jump and you don&amp;rsquo;t need allocate more memory when pushing more functions to the stack.</description>
     </item>
     
   </channel>
