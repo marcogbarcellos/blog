@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>How Elixir and Erlang handle recursion?</title>
-  <meta property="og:title" content="How Elixir and Erlang handle recursion?" />
-  <meta name="twitter:title" content="How Elixir and Erlang handle recursion?" />
-  <meta name="description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)">
-  <meta property="og:description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)">
-  <meta name="twitter:description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)">
+  <title>How Elixir and Erlang handle recursion</title>
+  <meta property="og:title" content="How Elixir and Erlang handle recursion" />
+  <meta name="twitter:title" content="How Elixir and Erlang handle recursion" />
+  <meta name="description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)?">
+  <meta property="og:description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)?">
+  <meta name="twitter:description" content="Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)?">
   <meta name="author" content="Marco Gabriel Barcellos"/>
   <link href='https://marcogbarcellos.github.io/blog/img/marco.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://marcogbarcellos.github.io/blog/img/marco.png" />
@@ -111,10 +111,10 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>How Elixir and Erlang handle recursion?</h1>
+              <h1>How Elixir and Erlang handle recursion</h1>
                 
                   
-                    <h2 class="post-subheading">Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)</h2>
+                    <h2 class="post-subheading">Why using recursion in elixir/erlang is not as bad as it is in most OO languages(in most cases)?</h2>
                   
                 
                 
@@ -136,15 +136,15 @@
       <article role="main" class="blog-post">
         
 
-<p>Many developers when solving specific problems prefer to stick with a recursive approach, and the reason might be because in some case it helps get a better time complexity(Big O) and this way improves the system performance in a whole. It also may involves personal preferences, like some think it&rsquo;s more readable, or elegant and so on.</p>
+<p>Many developers when solving specific problems prefer to stick with a recursive approach, and the reason might be because in some cases it helps get a better time complexity(Big O) thus improving the service performance. It also may involves personal preferences, i.e some might think it&rsquo;s a cleaner aproach, more readable, more elegant and so on.</p>
 
-<p>For most languages(mainly Object Oriented, but not only) this approach can demand a lot of memory to be executed as everytime you call a function in a recursive manner, this call goes to the Stack to be executed later. This way, depending on the amount of pushes to the stack it may be heavier than choosing a non-recursive approach to execute it, even though its Time complexity is superior.</p>
+<p>For most languages, this approach can demand a lot of memory to be executed as everytime you call a function in a recursive manner, this call goes to the memory stack to be executed later. Thus, depending on the amount of pushes to the stack, it may be heavier than choosing a non-recursive approach to execute it, even though its time complexity can be superior.</p>
 
 <h2 id="erlang-and-elixir-approach">Erlang and Elixir Approach</h2>
 
-<p>In Elixir and Erlang, we have what&rsquo;s called <code>tail-call optimization</code>. This optimization works in a way that&rsquo;s similar to a <code>goto</code> or a <code>jump</code> and you don&rsquo;t need allocate more memory when pushing more functions to the stack.</p>
+<p>In Elixir and Erlang, we have what&rsquo;s called <code>tail-call optimization</code>. A tail call function is a function which call another functions as its last thing. And this optimization works in a way that&rsquo;s similar to a <code>goto</code> or a <code>jump</code> and you don&rsquo;t need to allocate extra memory when pushing more functions to the stack.</p>
 
-<p>A tail call function is a function which call another functions as its last thing:</p>
+<p>The following snippet gives an example of what is a tail call function:</p>
 
 <pre><code>
 def first_func(...) do
@@ -157,6 +157,8 @@ end
 <p>But how does it actually works ?!?!</p>
 
 <p>In the snippet above, the final result of the <code>first_func</code> is the result of <code>another_func</code>. This is why the compiler can safely perform the operation by jumping to the beginning of another_fun without doing additional memory allocation. When another_func finishes, you return to whatever place original_func was called from.</p>
+
+<h2 id="endless-loops-won-t-cause-stack-overflow">Endless loops won&rsquo;t cause Stack Overflow</h2>
 
 <p>Take the following function :</p>
 
