@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Marcogbarcellos</title>
-    <link>https://marcogbarcellos.github.io/blog/tags/</link>
+    <link>https://marcogbarcellos.com/tags/</link>
     <description>Recent content in Tags on Marcogbarcellos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,87 +10,87 @@
     <webMaster>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</webMaster>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://marcogbarcellos.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://marcogbarcellos.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Beam</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/beam/</link>
+      <link>https://marcogbarcellos.com/tags/beam/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/beam/</guid>
+      <guid>https://marcogbarcellos.com/tags/beam/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elixir</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/elixir/</link>
+      <link>https://marcogbarcellos.com/tags/elixir/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/elixir/</guid>
+      <guid>https://marcogbarcellos.com/tags/elixir/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Erlang</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/erlang/</link>
+      <link>https://marcogbarcellos.com/tags/erlang/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/erlang/</guid>
+      <guid>https://marcogbarcellos.com/tags/erlang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Erlang Vm</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/erlang-vm/</link>
+      <link>https://marcogbarcellos.com/tags/erlang-vm/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/erlang-vm/</guid>
+      <guid>https://marcogbarcellos.com/tags/erlang-vm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functional Programming</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/functional-programming/</link>
+      <link>https://marcogbarcellos.com/tags/functional-programming/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/functional-programming/</guid>
+      <guid>https://marcogbarcellos.com/tags/functional-programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Memory Management</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/memory-management/</link>
+      <link>https://marcogbarcellos.com/tags/memory-management/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/memory-management/</guid>
+      <guid>https://marcogbarcellos.com/tags/memory-management/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Performance</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/performance/</link>
+      <link>https://marcogbarcellos.com/tags/performance/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/performance/</guid>
+      <guid>https://marcogbarcellos.com/tags/performance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recursion</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/recursion/</link>
+      <link>https://marcogbarcellos.com/tags/recursion/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/recursion/</guid>
+      <guid>https://marcogbarcellos.com/tags/recursion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scalability</title>
-      <link>https://marcogbarcellos.github.io/blog/tags/scalability/</link>
+      <link>https://marcogbarcellos.com/tags/scalability/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.github.io/blog/tags/scalability/</guid>
+      <guid>https://marcogbarcellos.com/tags/scalability/</guid>
       <description></description>
     </item>
     
