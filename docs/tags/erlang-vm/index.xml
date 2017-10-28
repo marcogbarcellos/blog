@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Erlang Vm on Marcogbarcellos</title>
-    <link>https://marcogbarcellos.com/tags/erlang-vm/</link>
+    <link>https://marcogbarcellos.github.io/blog/tags/erlang-vm/</link>
     <description>Recent content in Erlang Vm on Marcogbarcellos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,15 +10,15 @@
     <webMaster>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</webMaster>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://marcogbarcellos.com/tags/erlang-vm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://marcogbarcellos.github.io/blog/tags/erlang-vm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How Elixir and Erlang handle recursion</title>
-      <link>https://marcogbarcellos.com/post/2017-10-15-elixir-erlang-recursion/</link>
+      <link>https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       <author>marcogbarcellos@gmail.com (Marco Gabriel Barcellos)</author>
-      <guid>https://marcogbarcellos.com/post/2017-10-15-elixir-erlang-recursion/</guid>
+      <guid>https://marcogbarcellos.github.io/blog/post/2017-10-15-elixir-erlang-recursion/</guid>
       <description>Many developers when solving specific problems prefer to stick with a recursive approach, and the reason might be because in some cases it helps get a better time complexity(Big O) thus improving the service performance. It also may involves personal preferences, i.e some might think it&amp;rsquo;s a cleaner aproach, more readable, more elegant and so on.
 For most languages, this approach can demand a lot of memory to be executed as everytime you call a function in a recursive manner, this call goes to the memory stack to be executed later.</description>
     </item>
